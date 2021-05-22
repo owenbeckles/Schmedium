@@ -6,16 +6,8 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { rootReducer } from './store/index'
 import LoginFormPage from "./components/LoginFormPage";
+import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
-
-const AppWrapper = () => {
-  const store = createStore(rootReducer);
-  return (
-    <Provider store={store}> 
-      <App /> 
-    </Provider>
-  )
-}
 
 function App() {
   const dispatch = useDispatch();
@@ -29,8 +21,11 @@ function App() {
       <Route path="/login">
         <LoginFormPage />
       </Route>
+      <Route path="/signup">
+        <SignupFormPage />
+      </Route>
     </Switch>
   );
 }
 
-export default AppWrapper;
+export default App;
