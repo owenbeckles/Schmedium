@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 
 
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   session: sessionReducer,
 });
 
