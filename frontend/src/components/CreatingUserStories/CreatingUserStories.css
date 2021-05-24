@@ -1,3 +1,9 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+}
+
 .create-story {
     background: none;
     border: 0;
@@ -29,6 +35,7 @@
     font-weight: 700;
     position: relative;
     vertical-align: middle;
+    text-decoration: none;
 }
 
 .return-story:hover {
