@@ -22,11 +22,11 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-        </Switch>
-      )}
           <Route path='/create'>
             <CreatingUserStories />
           </Route>
+        </Switch>
+      )}
     </>
   );
 }

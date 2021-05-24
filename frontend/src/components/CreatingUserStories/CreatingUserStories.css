@@ -1,0 +1,39 @@
+.create-story {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 1em 2em;
+    box-shadow: inset 0 0 0 2px black;
+    color: black;
+    font-size: inherit;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+}
+
+.create-story:hover {
+    color: white;
+    background-color: black;
+}
+
+.return-story {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 1em 2em;
+    box-shadow: inset 0 0 0 2px black;
+    color: black;
+    font-size: inherit;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+}
+
+.return-story:hover {
+    color: white;
+    background-color: black;
+}
+
+
