@@ -1,0 +1,19 @@
+.login_username {
+    display: flex;
+    justify-content: center;
+}
+
+.login_password {
+    display: flex;
+    justify-content: center;
+}
+
+.login_info {
+    display: flex;
+    justify-content: center;
+}
+
+.login_button {
+    display: flex;
+    align-items: center;
+}

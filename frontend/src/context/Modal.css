@@ -20,6 +20,9 @@
   }
   
   #modal-content {
-    position: absolute;
-    background-color:white;
+    position: relative;
+    height: 20%;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-2.jpg');
+    background-size: cover;
+    overflow: auto;
   }
