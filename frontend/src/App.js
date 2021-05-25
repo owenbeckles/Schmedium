@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import CreatingUserStories from './components/CreatingUserStories';
+import UserStories from './components/UserStories';
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path='/create'>
             <CreatingUserStories />
+          </Route>
+          <Route path='/stories'>
+            <UserStories />
           </Route>
         </Switch>
       )}
