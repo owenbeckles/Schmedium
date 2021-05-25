@@ -8,8 +8,8 @@ const { requireAuth } = require('../../utils/auth');
 
 // Route for New Story
 router.get('/', asyncHandler(async(req, res) => {
-
+    const allStories = await db.Story.findAll({})
+    return res.json(allStories);
 }));
 
-// Route for Posting New Story
-router.post()
+module.exports = router;
