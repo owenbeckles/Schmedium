@@ -5,7 +5,10 @@
 }
 
 .create-story {
-    background: none;
+    background: linear-gradient(to right, black, black);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size 0.3s 0s;
     border: 0;
     box-sizing: border-box;
     margin: 1em;
@@ -16,15 +19,19 @@
     font-weight: 700;
     position: relative;
     vertical-align: middle;
+    text-decoration: none;
 }
 
 .create-story:hover {
     color: white;
-    background-color: black;
+    background-size: 100% 100%;
 }
 
 .return-story {
-    background: none;
+    background: linear-gradient(to right, black, black);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size 0.3s 0s;
     border: 0;
     box-sizing: border-box;
     margin: 1em;
@@ -40,7 +47,7 @@
 
 .return-story:hover {
     color: white;
-    background-color: black;
+    background-size: 100% 100%;
 }
 
 
