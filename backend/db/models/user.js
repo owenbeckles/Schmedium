@@ -30,6 +30,20 @@ module.exports = (sequelize, DataTypes) => {
         len: [60, 60]
       },
     },
+    profileImage: {
+      type: DataTypes.STRING,
+    },
+    firstname: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    lastname: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    bio: {
+      type: DataTypes.STRING,
+    },
   },
   {
     defaultScope: {
@@ -87,6 +101,8 @@ module.exports = (sequelize, DataTypes) => {
   
   User.associate = function(models) {
     // associations can be defined here
+    User.hasMany(models.Story, { foreignKey: 'userId' })
+    User.hasMany(models.Comment, { foreignKey: 'userId'});
   };
   return User;
 };
