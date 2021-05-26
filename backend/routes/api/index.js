@@ -2,12 +2,16 @@ const router = require('express').Router();
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const userStoriesRouter = require('./newstories');
+const creatingStoriesRouter = require('./createstory.js');
 
 router.use('/session', sessionRouter);
 
 router.use('/users', usersRouter);
 
 router.use('/userstories', userStoriesRouter)
+
+router.use('/create', creatingStoriesRouter)
+
 
 module.exports = router;
 

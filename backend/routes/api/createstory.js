@@ -5,10 +5,9 @@ const router = express.Router();
 const db = require('../../db/models');
 
 // Route for creating new stories 
-router.post('', asyncHandler(async(req, res) => {
-    const { title, content } = req.body;
-    const userId = req.session.auth.userId;
-    const newStory = await db.build({
+router.post('/', asyncHandler(async(req, res) => {
+    const { title, content, userId } = req.body;
+    const newStory = await db.Story.build({
         title,
         content,
         userId,
@@ -16,3 +15,5 @@ router.post('', asyncHandler(async(req, res) => {
 
     return res.json(newStory);
 }))
+
+module.exports = router;
