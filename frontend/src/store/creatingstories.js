@@ -10,16 +10,17 @@ const createstory = (data) => {
 }
 
 export const createUserStories = (story) => async (dispatch) => {
-    const { title, content } = story;
-    const res = await csrfFetch('/api/createstory', {
+    const { title, content, userId } = story;
+    const res = await csrfFetch('/api/create', {
         method: 'POST',
         body: JSON.stringify({
             title,
             content,
+            userId
         })
     });
     const data = await res.json();
-    dispatch(createstory(data.story));
+    dispatch(createstory(data));
     return res;
 }
 
