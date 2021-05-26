@@ -14,7 +14,7 @@ function CreatingUserStories () {
             </form>
             <form>
                 <label>
-                    <input className='story-content' type='text' placeholder='Story...'></input>
+                    <textarea className='story-content' type='text' placeholder='Story...'></textarea>
                 </label>
             </form>
             </div>
