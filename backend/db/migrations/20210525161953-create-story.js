@@ -22,7 +22,6 @@ module.exports = {
         references: { model: 'Users'}
       },
       storyImage: {
-        allowNull: false,
         type: Sequelize.STRING(255)
       },
       createdAt: {

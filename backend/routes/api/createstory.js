@@ -7,7 +7,7 @@ const db = require('../../db/models');
 // Route for creating new stories 
 router.post('/', asyncHandler(async(req, res) => {
     const { title, content, userId } = req.body;
-    const newStory = await db.Story.build({
+    const newStory = await db.Story.create({
         title,
         content,
         userId,

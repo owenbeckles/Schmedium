@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
       // references: { model: 'Users' }
     },
     storyImage: {
-      allowNull: false,
       type: DataTypes.STRING
     }
   }, {});
