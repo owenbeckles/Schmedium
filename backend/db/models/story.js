@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     userId: {
       allowNull: false,
       type: DataTypes.INTEGER,
-      references: { model: 'Users' }
+      // references: { model: 'Users' }
     },
     storyImage: {
       allowNull: false,

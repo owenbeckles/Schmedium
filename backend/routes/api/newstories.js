@@ -6,7 +6,7 @@ const db = require('../../db/models');
 const { requireAuth } = require('../../utils/auth');
 
 
-// Route for New Story
+// Route for grabbing all stories
 router.get('/', asyncHandler(async(req, res) => {
     const allStories = await db.Story.findAll({})
     return res.json(allStories);
