@@ -9,6 +9,16 @@ const { handleValidationErrors } = require('../../utils/validation');
 const router = express.Router();
 
 const validateSignup = [
+    check('firstname')
+      .exists({ checkFalsy: true })
+      .withMessage("First Name cannot be empty")
+      .isLength({ max: 50 })
+      .withMessage("First Name must not be more than 50 characters long."),
+    check('lastname')
+      .exists({ checkFalsy: true })
+      .withMessage("Last Name cannot be empty")
+      .isLength({ max: 50 })
+      .withMessage("Last Name must not be more than 50 characters long."),
     check('email')
       .exists({ checkFalsy: true })
       .isEmail()
@@ -30,10 +40,11 @@ const validateSignup = [
 
   router.post(
     '/',
-    validateSignup,
+    // validateSignup,
     asyncHandler(async (req, res) => {
-      const { email, password, username } = req.body;
-      const user = await User.signup({ email, username, password });
+      const { firstname, lastname, email, password, username } = req.body;
+      console.log(req.body);
+      const user = await User.signup({ firstname, lastname, email, username, password });
   
       await setTokenCookie(res, user);
   

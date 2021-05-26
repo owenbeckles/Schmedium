@@ -1,0 +1,9 @@
+.sign-up-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.yes {
+    height: 100px;
+    width: 220px;
+}

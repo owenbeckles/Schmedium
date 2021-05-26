@@ -1,8 +1,9 @@
 // frontend/src/components/Navigation/ProfileButton.js
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
-import './ProfileButton.css';
+import './Navigation.css';
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -33,12 +34,24 @@ function ProfileButton({ user }) {
   return (
     <>
       <button onClick={openMenu}>
-        <i class="fas fa-bars" />
+        <i className='yes'></i>
       </button>
       {showMenu && (
         <ul className="profile-dropdown">
           <li>{user.username}</li>
           <li>{user.email}</li>
+          <li>
+            <Link to='/create' className='create-button'>New Story</Link>
+          </li>
+          <li>
+          <Link to='/stories' className='create-button'>My Stories</Link>
+          </li>
+          <li>
+          <Link to='/' className='create-button'>My Profile</Link>
+          </li>
+          <li>
+          <Link to='/create' className='create-button'>Settings</Link>
+          </li>
           <li>
             <button onClick={logout}>Log Out</button>
           </li>
