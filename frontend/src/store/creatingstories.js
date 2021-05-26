@@ -11,22 +11,30 @@ const createstory = (data) => {
 
 export const createUserStories = (story) => async (dispatch) => {
     const { title, content } = story;
-    const res = await csrfFetch('api/createstory', {
+    const res = await csrfFetch('/api/createstory', {
         method: 'POST',
         body: JSON.stringify({
             title,
             content,
-        });
+        })
     });
-    const data = await Response.json();
+    const data = await res.json();
     dispatch(createstory(data.story));
     return res;
 }
 
-const creatingStoriesReducer = (state = {}, action) => {
+const initialState = { stories: null }
+
+const creatingStoriesReducer = (state = initialState, action) => {
     let newState;
     switch (action.type) {
         case CREATE_STORY:
-            newState = 
+            newState = Object.assign({}, state);
+            newState[action.payload.id] = action.payload;
+            return newState;
+        default:
+            return state; 
     }
 }
+
+export default creatingStoriesReducer;

@@ -1,3 +1,4 @@
-.fas fa-home {
-    height: 100px;
+.sign-up-button {
+    display: flex;
+    justify-content: flex-end;
 }
