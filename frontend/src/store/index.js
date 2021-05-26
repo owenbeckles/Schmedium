@@ -3,6 +3,7 @@ import sessionReducer from './session';
 import thunk from 'redux-thunk';
 import userStoriesReducer from './userstories';
 import creatingStoriesReducer from './creatingstories';
+import individualStoryReducer from './individualstory';
 
 
 
@@ -10,6 +11,7 @@ export const rootReducer = combineReducers({
   session: sessionReducer,
   userStories: userStoriesReducer,
   createStories: creatingStoriesReducer,
+  individualStories: individualStoryReducer,
 });
 
 let enhancer;
