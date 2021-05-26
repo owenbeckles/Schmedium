@@ -6,7 +6,7 @@
 }
 
 .user-edit-button {
-    background: linear-gradient(to right, black, black);
+    background: linear-gradient(to right, #738276, #738276);
     background-repeat: no-repeat;
     background-size: 0 100%;
     transition: background-size 0.3s 0s;

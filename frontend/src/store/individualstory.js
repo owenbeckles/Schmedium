@@ -44,7 +44,7 @@ const individualStoryReducer = (state = {}, action) => {
             return newState;
         case DELETE_STORY:
             newState = Object.assign({}, state);
-            newState[story.id] = null;
+            newState.story = null;
             return newState;
         default:
             return state;
