@@ -4,9 +4,24 @@ import { Link } from 'react-router-dom';
 
 function CreatingUserStories () {
     return (
-        <div class='buttons'>
-        <button class='create-story' type="submit">Create</button>
-        <Link to='/stories' class='return-story'>Return to My Stories</Link>
+        <div className='create-story-container'>
+            <body></body>
+            <div className='story'>
+            <form>
+                <label>
+                    <input className='story-title' type='text' placeholder='Title...'></input>
+                </label>
+            </form>
+            <form>
+                <label>
+                    <input className='story-content' type='text' placeholder='Story...'></input>
+                </label>
+            </form>
+            </div>
+            <div className='button-container'>
+            <button className='create-story-buttons' type="submit">Create</button>
+            <Link to='/stories' className='create-story-buttons'>My Stories</Link>
+            </div>
         </div>
     )
 }

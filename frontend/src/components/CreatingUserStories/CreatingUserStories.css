@@ -1,53 +1,78 @@
-.buttons {
+body {
+    background-color: #F1F5F9;
+}
+
+.create-story-container {
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+}
+
+.story-title {
+    font-size: 30px;
+    margin-top: 30px;
+    width: 100%;
+    resize: none;
+    /* height: 500px; */
+    outline: none;
+    border: none;
+    background-color: #F1F5F9;
+}
+
+.story-content {
+    font-size: 30px;
+    margin-top: 30px;
+    width: 100%;
+    resize: none;
+    /* height: 500px; */
+    outline: none;
+    border: none;
+    background-color: #F1F5F9;
+    padding-top: 100px;
+}
+
+.create-story-buttons {
+    background: linear-gradient(to right, black, black);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size 0.3s 0s;
+    border: 0;
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 1em 2em;
+    box-shadow: inset 0 0 0 2px black;
+    color: black;
+    font-size: inherit;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+    text-decoration: none;
+    display: flex;
+    width: 15%;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* position: relative; */
+}
+
+.create-story-buttons:hover {
+    color: white;
+    background-size: 100% 100%;
+}
+
+.button-container {
     display: flex;
     justify-content: center;
-    align-content: flex-end;
+    align-items: center;
+    padding-top: 200px;
 }
 
-.create-story {
-    background: linear-gradient(to right, black, black);
-    background-repeat: no-repeat;
-    background-size: 0 100%;
-    transition: background-size 0.3s 0s;
-    border: 0;
-    box-sizing: border-box;
-    margin: 1em;
-    padding: 1em 2em;
-    box-shadow: inset 0 0 0 2px black;
-    color: black;
-    font-size: inherit;
-    font-weight: 700;
-    position: relative;
-    vertical-align: middle;
-    text-decoration: none;
-}
 
-.create-story:hover {
-    color: white;
-    background-size: 100% 100%;
-}
 
-.return-story {
-    background: linear-gradient(to right, black, black);
-    background-repeat: no-repeat;
-    background-size: 0 100%;
-    transition: background-size 0.3s 0s;
-    border: 0;
-    box-sizing: border-box;
-    margin: 1em;
-    padding: 1em 2em;
-    box-shadow: inset 0 0 0 2px black;
-    color: black;
-    font-size: inherit;
-    font-weight: 700;
-    position: relative;
-    vertical-align: middle;
-    text-decoration: none;
-}
-
-.return-story:hover {
-    color: white;
-    background-size: 100% 100%;
-}
 
 

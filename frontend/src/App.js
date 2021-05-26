@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import CreatingUserStories from './components/CreatingUserStories';
+import Homepage from './components/Homepage';
 import UserStories from './components/UserStories';
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
@@ -20,6 +21,9 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
           <Route path="/signup">
             <SignupFormPage />
           </Route>
@@ -29,6 +33,7 @@ function App() {
           <Route path='/stories'>
             <UserStories />
           </Route>
+          {/* //Ternary for session user on homepage */}
         </Switch>
       )}
     </>

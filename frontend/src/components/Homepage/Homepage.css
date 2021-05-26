@@ -1,0 +1,12 @@
+.story-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-content: space-around;
+    padding-left: 15px; */
+}
+
+.trending-stories {
+    display: flex;
+    align-content: space-around;
+}
