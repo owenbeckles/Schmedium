@@ -16,7 +16,7 @@ export const createUserStories = (story) => async (dispatch) => {
         body: JSON.stringify({
             title,
             content,
-            userId
+            userId,
         })
     });
     const data = await res.json();

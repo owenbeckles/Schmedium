@@ -3,6 +3,8 @@ import { csrfFetch } from './csrf';
 const ALL_STORIES = 'session/allstories';
 const REMOVE_USER = 'session/removeUser';
 const DELETE_STORY = 'session/deletestories';
+const CREATE_STORY = 'session/createstory';
+const EDIT_STORY = 'session/editstories';
 
 const allStories = (data) => {
   return {
@@ -10,6 +12,13 @@ const allStories = (data) => {
     payload: data,
   };
 };
+
+const editstories = (data) => {
+  return {
+    type: EDIT_STORY,
+    payload: data,
+  }
+}
 
 const deletestories = (story) => {
   return {
@@ -41,6 +50,20 @@ export const deleteStory = (story) => async (dispatch) => {
   return response;
 }
 
+export const editStory = (story) => async (dispatch) => {
+  const { title, content } = story;
+  const response = await csrfFetch(`/api/individualstory/${story.id}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      title,
+      content
+    })
+  });
+  const edit = await response.json();
+  dispatch(editstories(edit));
+  return edit;
+}
+
 const userStoriesReducer = (state = {}, action) => {
   let newState;
   switch (action.type) {
@@ -53,6 +76,10 @@ const userStoriesReducer = (state = {}, action) => {
     case DELETE_STORY:
       newState = {...state}
       delete newState[action.payload.id];
+      return newState;
+    case EDIT_STORY:
+      newState = {...state};
+      newState[action.payload.id] = action.payload
       return newState;
     default:
       return state;
