@@ -13,7 +13,7 @@ router.delete('/:id', asyncHandler(async (req,res) => {
 }));
 
 // Edit User Posts
-router.put('/', asyncHandler(async(req, res) => {
+router.put('/:id', asyncHandler(async(req, res) => {
     const { title, content, userId } = req.body;
     const storyId = req.params.id;
     const edit = await db.Story.findByPk(storyId)

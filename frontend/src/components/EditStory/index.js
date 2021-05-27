@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { editStory } from '../../store/userstories';
+import { editStory, getUserStories } from '../../store/userstories';
 import './EditStory.css';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -18,12 +18,18 @@ function EditStory () {
     const dispatch = useDispatch();
     const history = useHistory();
 
+    useEffect(() => {
+        console.log("Use Effect working")
+        dispatch(getUserStories())
+    }, [])
+
     const handleClick = async(e) => {
         e.preventDefault();
         const data = {
             title,
             content,
-            userId 
+            userId,
+            id: story.id,
         }
         await dispatch(editStory(data))
         history.push(`/edit/${story.id}`)
@@ -35,17 +41,17 @@ function EditStory () {
         <div className='story'>
         <form>
             <label>
-                <input className='story-title' type='text' placeholder='Title...' value={`${story.title}`} onChange={(e) => setTitle(e.target.value)}></input>
+                <input className='story-title' type='text' placeholder='Title...' value={story.title} onChange={(e) => setTitle(e.target.value)}></input>
             </label>
         </form>
         <form>
             <label>
-                <textarea className='story-content' type='text' placeholder='Story...' value={`${story.content}`} onChange={(e) => setContent(e.target.value)}></textarea>
+                <textarea className='story-content' type='text' placeholder='Story...' value={story.content} onChange={(e) => setContent(e.target.value)}></textarea>
             </label>
         </form>
         </div>
         <div className='button-container'>
-                <button className='confirm-edit-button' type="submit" onClick= { handleClick }>Confirm Edit</button>
+                <button className='confirm-edit-button' type="button" onClick= { handleClick }>Confirm Edit</button>
             <Link to='/stories' className='create-story-buttons'>My Stories</Link>
         </div>
     </div>
