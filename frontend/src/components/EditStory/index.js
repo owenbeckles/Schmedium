@@ -23,6 +23,13 @@ function EditStory () {
         dispatch(getUserStories())
     }, [])
 
+    useEffect(() => {
+        if (story) {
+            setTitle(story.title);
+            setContent(story.content);
+        }
+    }, [story])
+
     const handleClick = async(e) => {
         e.preventDefault();
         const data = {
@@ -32,7 +39,7 @@ function EditStory () {
             id: story.id,
         }
         await dispatch(editStory(data))
-        history.push(`/edit/${story.id}`)
+        history.push(`/stories`)
     }
 
     return (
@@ -41,17 +48,20 @@ function EditStory () {
         <div className='story'>
         <form>
             <label>
-                <input className='story-title' type='text' placeholder='Title...' value={story.title} onChange={(e) => setTitle(e.target.value)}></input>
+                <input className='story-title' type='text' placeholder='Title...' value={title} onChange={(e) => setTitle(e.target.value)}></input>
             </label>
         </form>
         <form>
             <label>
-                <textarea className='story-content' type='text' placeholder='Story...' value={story.content} onChange={(e) => setContent(e.target.value)}></textarea>
+                <textarea className='story-content' type='text' placeholder='Story...' value={content} onChange={(e) => setContent(e.target.value)}></textarea>
             </label>
         </form>
         </div>
         <div className='button-container'>
-                <button className='confirm-edit-button' type="button" onClick= { handleClick }>Confirm Edit</button>
+                <button className='confirm-edit-button' type="button" onClick= { handleClick }>
+                    Confirm Edit
+                    
+                </button>
             <Link to='/stories' className='create-story-buttons'>My Stories</Link>
         </div>
     </div>
