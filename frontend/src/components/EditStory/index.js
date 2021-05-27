@@ -12,6 +12,7 @@ import { useParams } from 'react-router-dom';
 function EditStory () {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
+    const [userId, setUserId] = useState(null);
     const { id } = useParams();
     const story = useSelector((state) => state.userStories[id])
     const dispatch = useDispatch();
@@ -21,7 +22,8 @@ function EditStory () {
         e.preventDefault();
         const data = {
             title,
-            content
+            content,
+            userId 
         }
         await dispatch(editStory(data))
         history.push(`/edit/${story.id}`)

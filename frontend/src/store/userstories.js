@@ -13,10 +13,10 @@ const allStories = (data) => {
   };
 };
 
-const editstories = (data) => {
+const editstories = (story) => {
   return {
     type: EDIT_STORY,
-    payload: data,
+    payload: story,
   }
 }
 
@@ -51,17 +51,19 @@ export const deleteStory = (story) => async (dispatch) => {
 }
 
 export const editStory = (story) => async (dispatch) => {
-  const { title, content } = story;
+  const { title, content, userId } = story;
+  console.log("==========",story);
   const response = await csrfFetch(`/api/individualstory/${story.id}`, {
     method: 'PUT',
     body: JSON.stringify({
       title,
-      content
+      content,
+      userId
     })
   });
   const edit = await response.json();
   dispatch(editstories(edit));
-  return edit;
+  return response;
 }
 
 const userStoriesReducer = (state = {}, action) => {
