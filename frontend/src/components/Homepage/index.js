@@ -23,211 +23,168 @@ function Homepage () {
             {storiesArray.map(story => {
                 return <h1 className='trending-stories'>{story.title}</h1>
             })}
-            {/* <body></body>
-            <Link to='/create' className='new-story-button'>New Story</Link> */}
-            {/* <div class="hold">
-            <div class="header">
-                <div class="container">
-                <div id="logo">
-                </div>
-                <ul class="nav">
-                    <li><a href="#">Click 1</a></li>
-                    <li><a href="#">Click 2</a></li>
-                    <li><a href="#">Click 3</a></li>
-                    <li><a href="#">Click 4</a></li>
-                </ul>
-                </div>
-            </div>
-            </div>
-            <div class="section">
-            <div class="slider">
-                <div class="container slidercontent">
-                <h1 class="hero">Hello</h1>
-                <h2 class="hero">Hello</h2>
-                <div class="call"><span>Hello</span></div>
-                </div>
-            </div>
-            </div>
-            <div class="section">
-            <div class="container">
-                <div class="col four">
-                <h1 class="icon">[]</h1>
-                <h1 class="service">Hello</h1>
-                <p>Okay</p>
-                </div>
-                <div class="col four">
-                <h1 class="icon">[]</h1>
-                <h1 class="service">Wow</h1>
-                <p>Wow wow wow wow wow wow wow wow wow</p>
-                </div>
-                <div class="responsivegroup"></div>
-                <div class="col four">
-                <h1 class="icon">[]</h1>
-                <h1 class="service">Wow</h1>
-                <p>Wow wow wow wow wow wow wow wow wow wow wow</p>
-                </div>
-                <div class="col four">
-                <h1 class="icon">[]</h1>
-                <h1 class="service">Wow</h1>
-                <p>Wow wow wow wow wow wow wow</p>
-                </div>
-                <div class="group"></div>
-            </div>
-            </div>
-            <div class="section bg">
-            <div class="container">
-                <h1>Wow wow</h1>
-                <h2>Wow wow wow!</h2>
-                <div class="col three bg nopad pointer">
-                <div class="imgholder"></div>
-                <h1 class="feature">Hello</h1>
-                <p>Wow wow</p>
-                </div>
-                <div class="col three bg nopad pointer">
-                <div class="imgholder"></div>
-                <h1 class="feature">Wow</h1>
-                <p>Wow wow wow</p>
-                </div>
-                <div class="col three bg nopad pointer">
-                <div class="imgholder"></div>
-                <h1 class="feature">Wow</h1>
-                <p>Wow wow wow</p>
-                </div>
-                <div class="group margin"></div>
-                <div class="col three bg nopad pointer">
-                <div class="imgholder"></div>
-                <h1 class="feature">Wow</h1>
-                <p>Wow wow</p>
-                </div>
-                <div class="col three bg nopad pointer">
-                <div class="imgholder"></div>
-                <h1 class="feature">Wow</h1>
-                <p>Wow wow wow</p>
-                </div>
-                <div class="col three bg nopad pointer">
-                <div class="imgholder"></div>
-                <h1 class="feature">Wow</h1>
-                <p>Wow wow wow</p>
-                </div>
-                <div class="group"></div>
-            </div>
-            </div>
-            <div class="section">
-            <div class="container">
-                <h1>Title</h1>
-                <h2>Title</h2>
-                <div class="col three">
-                <h1 class="icon side">[]</h1>
-                <h1 class="feature side">User</h1>
-                <p class="side">Content</p>
-                </div>
-                <div class="col three">
-                <h1 class="icon side">[]</h1>
-                <h1 class="feature side">Story</h1>
-                <p class="side">Content</p>
-                </div>
-                <div class="col three">
-                <h1 class="icon side">[]</h1>
-                <h1 class="feature side">Story</h1>
-                <p class="side">Content</p>
-                </div>
-                <div class="group margin"></div>
-                <div class="col three">
-                <h1 class="icon side">[]</h1>
-                <h1 class="feature side">Story</h1>
-                <p class="side">Content</p>
-                </div>
-                <div class="col three">
-                <h1 class="icon side">[]</h1>
-                <h1 class="feature side">Story</h1>
-                <p class="side">Content</p>
-                </div>
-                <div class="col three">
-                <h1 class="icon side">[]</h1>
-                <h1 class="feature side">Story</h1>
-                <p class="side">Content</p>
-                </div>
-                <div class="group margin"></div>
-            </div>
-            </div>
-            <div class="section bg">
-            <div class="container">
-                <h1>Title</h1>
-                <h2>Title</h2>
-                <div class="col two bg margin extrapad">
-                <h1 class="icon side">[]</h1>
-                <span class="feature side">Story</span><span class="side"> - Author</span>
-                <p class="side">Content</p>
-                </div>
-                <div class="col two bg margin extrapad">
-                <h1 class="icon side">[]</h1>
-                <span class="feature side">Story</span><span class="side"> - Author</span>
-                <p class="side">Content</p>
-                </div>
-                <div class="group margin"></div>
-                <div class="col two bg margin extrapad">
-                <h1 class="icon side">[]</h1>
-                <span class="feature side">Story</span><span class="side"> - Author</span>
-                <p class="side">Content</p>
-                </div>
-                <div class="col two bg margin extrapad">
-                <h1 class="icon side">[]</h1>
-                <span class="feature side">Story</span><span class="side"> - Author</span>
-                <p class="side">Content</p>
-                </div>
-                <div class="group"></div>
-            </div>
-            </div>
-            <div class="section">
-            <div class="container">
-                <div class="col two">
-                <h1 class="icon">[]</h1>
-                <h1 class="service">Story</h1>
-                <p>Wow wow wow wow wow wow wow wow wow wow wow wow wow</p>
-                </div>
-                <div class="col two">
-                <h1 class="icon">[]</h1>
-                <h1 class="service">Wow</h1>
-                <p>Wow wow wow wow wow wow wow wow wow</p>
-                </div>
-                <div class="group"></div>
-            </div>
-            </div>
-            <div class="section">
-            <div class="container">
-                <h1 class="reset">Terrible.</h1>
-            </div>
-            </div>
-            <div class="section">
-            <div class="footer">
-                <div class="container white">
-                <div class="col four left">
-                    <h1>What?</h1>
-                    <p>So that's it. This started out as 20 minutes of making fun of modern web dev. Then it turned into a few hours of it.</p>
-                    <p>I hope you've enjoyed looking at every modern website ever.</p>
-                    <p>I don't actually hate this style as long as the content is meaningful. In fact, I think this type of design is pretty cool and effective.</p>
-                </div>
-                <div class="col four left">
-                    <h1>How?</h1>
-                    <p>CSS3 and HTML. JS for header shrinking; optional. Site works perfectly with JS disabled (another gripe of mine with modern web dev).</p>
-                    <p>Only external libraries are GFonts.</p>
-                    <p>Moderately responsive, should work on anything modern.</p>
-                </div>
-                <div class="col four left">
-                    <h1>Why?</h1>
-                    <p>Many popular HTML themes have thousands of lines of HTML, thousands of lines of CSS and several JS plugins on every page amounting to tens of thousands of lines of JavaScript.</p>
-                    <p>I fail to see a valid reason for this, particularly the horrendous line counts that are usually due to unused features or badly designed code.</p>
-                </div>
-                <div class="col four left">
-                    <h1>Who?</h1>
-                    <p>I'm Andrew.</p>
-                    <p>You can get in touch with me through <a href="http://atunnecliffe.com">http://atunnecliffe.com</a> or <a href="mailto:andrew@atunnecliffe.com">emailing me</a>.</p>
-                </div>
-                <div class="group"></div>
-                </div>
-            </div>
-            </div> */}
-        </div>
+            {/* <div class="blog">
+                    <div class="blog-part is-menu">
+                    <a href="#" class="blog-menu">
+                    Work
+                    <svg fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right" viewBox="0 0 24 24">
+                        <path d="M7 17L17 7M7 7h10v10" />
+                    </svg>
+                    </a>
+                    <a href="#" class="blog-menu">Studio</a>
+                    <a href="#" class="blog-menu">Blog</a>
+                    <a href="#" class="blog-menu">Contact</a>
+                    <a href="#" class="blog-menu mention">@MagazineDope</a>
+                    <a href="#" class="blog-menu subscribe">Subscribe</a>
+                    </div>
+                    <div class="blog-header blog-is-sticky">
+                    <div class="blog-article header-article">
+                    <div class="blog-big__title">Self</div>
+                    <div class="blog-menu rounded small-title">Pinned Issue</div>
+                    </div>
+                    <div class="blog-article page-number">
+                    NO. 01
+                    </div>
+                    </div>
+                    <div class="blog-header-container">
+                    <div class="blog-header">
+                    <div class="blog-article header-article">
+                        <div class="blog-big__title">Esteem</div>
+                        <div class="blog-menu small-title date">12.06.2021</div>
+                    </div>
+                    <div class="blog-article">
+                        <img src="https://images.unsplash.com/photo-1496629062893-b0f566065d44?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGJsYWNrJTIwYW5kJTIwd2hpdGV8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                        <h2>Sharing The <span>Widespread</span> Acclaim About Motivation</h2>
+                        <div class="blog-detail">
+                        <span>By Richard Carnation</span>
+                        <span>5 Min Read</span>
+                        </div>
+                        <p>Blonde received widespread acclaim, with critics praising Ocean's introspective lyrics and the album's unconventional</p>
+                        <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-right" viewBox="0 0 24 24">
+                        <path d="M15 10l5 5-5 5" />
+                        <path d="M4 4v7a4 4 0 004 4h12" />
+                        </svg>
+                        See More
+                        </a>
+                    </div>
+                    </div>
+                    <div class="blog-header">
+                    <div class="blog-article header-article">
+                        <div class="blog-big__title">Love</div>
+                        <div class="blog-menu small-title date">12.06.2021</div>
+                    </div>
+                    <div class="blog-article">
+                        <img src="https://images.unsplash.com/photo-1529255484355-cb73c33c04bb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTh8fGJsYWNrJTIwYW5kJTIwd2hpdGV8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                        <h2>Talking About <span>Vulnerability</span> During Quarantine</h2>
+                        <div class="blog-detail">
+                        <span>By Tom Hiddleston</span>
+                        <span>5 Min Read</span>
+                        </div>
+                        <p>Having traveled to Turkey multiple times, with critics praising Ocean's introspective lyrics and the album's unconventional</p>
+                        <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-right" viewBox="0 0 24 24">
+                        <path d="M15 10l5 5-5 5" />
+                        <path d="M4 4v7a4 4 0 004 4h12" />
+                        </svg>
+                        See More
+                        </a>
+                    </div>
+                    </div>
+                    <div class="blog-header">
+                    <div class="blog-article header-article">
+                        <div class="blog-big__title">Control</div>
+                        <div class="blog-menu small-title date">12.06.2021</div>
+                    </div>
+                    <div class="blog-article">
+                        <img src="https://images.unsplash.com/photo-1616248249518-b16013cd4e42?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkzfHxibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                        <h2>How 2020 Changed <span>Understanding</span> Of Mental Health</h2>
+                        <div class="blog-detail">
+                        <span>By Scarlett Witch</span>
+                        <span>5 Min Read</span>
+                        </div>
+                        <p>Time is defines ad the indefinete continued progress, with critics praising Ocean's introspective lyrics and the album's</p>
+                        <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-right" viewBox="0 0 24 24">
+                        <path d="M15 10l5 5-5 5" />
+                        <path d="M4 4v7a4 4 0 004 4h12" />
+                        </svg>
+                        See More
+                        </a>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="blog-part right-blog">
+                    <marquee width="100%" direction="left">
+                    <span>Now And Then You Miss It Sounds Make You Cry</span>
+                    <span>Now In - MoMa Sharing Exhibition NOW</span>
+                    <span>NYC Opens After Long Lockdown Check</span>
+                    </marquee>
+                    <div class="blog-right-title-container">
+                    <div class="blog-right-title">
+                        Featured Articles
+                    </div>
+                    <div class="blog-menu rounded">See All</div>
+                    </div>
+                    <div class="blog-right">
+                    <div class="blog-right-container">
+                        <div class="blog-title-date">
+                        <div class="blog-right-page">1</div>
+                        <div class="date">12.06.2021</div>
+                        </div>
+                        <div class="blog-right-page-title">Blonde - Widespread Acclaim</div>
+                        <div class="blog-right-page-subtitle">Blonde received widespread acclaim, with critics praising Ocean's introspective lyrics and the album's</div>
+                    </div>
+                    <div class="blog-right-container">
+                        <div class="blog-title-date">
+                        <div class="blog-right-page">2</div>
+                        <div class="date">12.06.2021</div>
+                        </div>
+                        <div class="blog-right-page-title">Introspective Lyrics and Beats</div>
+                        <div class="blog-right-page-subtitle">When we toured Scotland we stopped at several selft-sealing hpuses because hotels would</div>
+                    </div>
+                    <div class="blog-right-container">
+                        <div class="blog-title-date">
+                        <div class="blog-right-page">3</div>
+                        <div class="date">12.06.2021</div>
+                        </div>
+                        <div class="blog-right-page-title">The Language Of Gris: Comples Beauty Of Monochrome</div>
+                        <div class="blog-right-page-subtitle">The interior concept was conceived of by Dutch archtitect Studio Anne Holtrop who cleverly emulated</div>
+                    </div>
+                    <div class="blog-right-container">
+                        <div class="blog-title-date">
+                        <div class="blog-right-page">4</div>
+                        <div class="date">12.06.2021</div>
+                        </div>
+                        <div class="blog-right-page-title">A24 IS LAUNCHING ITS OWN BEAUTY BRAND</div>
+                        <div class="blog-right-page-subtitle">Blonde received widespread acclaim, with critics praising Ocean's introspective lyrics and the album's</div>
+                    </div>
+                    <div class="blog-right-container">
+                        <div class="blog-title-date">
+                        <div class="blog-right-page">5</div>
+                        <div class="date">12.06.2021</div>
+                        </div>
+                        <div class="blog-right-page-title">Elon Musk's SpaceX is launching a moon satellite</div>
+                        <div class="blog-right-page-subtitle">The interior concept was conceived of by Dutch archtitect Studio Anne Holtrop who cleverly emulated</div>
+                    </div>
+                    <div class="blog-right-container">
+                        <div class="blog-title-date">
+                        <div class="blog-right-page">6</div>
+                        <div class="date">12.06.2021</div>
+                        </div>
+                        <div class="blog-right-page-title">What Happens When You Leave Your Old life Behind</div>
+                        <div class="blog-right-page-subtitle">The interior concept was conceived of by Dutch archtitect Studio Anne Holtrop who cleverly emulated</div>
+                    </div>
+                    <div class="circle">
+                        <div class="circle-title">Leave Your Old Life Behind</div>
+                        <div class="circle-subtitle">Don't try to be like someone else, be yourselft. Be secure with yourself.</div>
+                        <div class="circle-footer">Explore</div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+             */}
+    </div>
                 )
 }
 

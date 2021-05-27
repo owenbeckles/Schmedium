@@ -49,8 +49,8 @@ function CreatingUserStories () {
                 </label>
             </form>
             </div>
-            <div onClick={ handleClick } className='button-container'>
-                    <button className='create-story-buttons' type="submit">Create</button>
+            <div className='button-container'>
+                    <button onClick={ handleClick } className='create-story-buttons' type="submit">Create</button>
                 <Link to='/stories' className='create-story-buttons'>My Stories</Link>
             </div>
         </div>

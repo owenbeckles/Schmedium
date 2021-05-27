@@ -3,7 +3,7 @@ import { getIndividualStory } from '../../store/creatingstories';
 import { Link } from 'react-router-dom';
 import { getUserStories } from '../../store/userstories';
 import './IndividualStory.css';
-import { deleteStory } from '../../store/individualstory';
+import { deleteStory } from '../../store/userstories';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -18,18 +18,15 @@ function IndividualStory () {
     const dispatch = useDispatch();
     const history = useHistory();
     
+    console.log('This is story', story)
+
     useEffect(() => {
+        // Dispatch is thunk
         dispatch(getUserStories());
     }, [])
 
     const handleClick = async(e) => {
-        e.preventDefault()
-        const data = { 
-            title, 
-            content, 
-            userId 
-        }
-        dispatch(deleteStory(data));
+        await dispatch(deleteStory(story));
         history.push('/stories');
     }
 

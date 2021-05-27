@@ -14,10 +14,12 @@ function UserStories () {
     const storiesArray = Object.values(allStories);
 
     const handleClick = (id) => {
+        // Click
         history.push(`/stories/${id}`);
     }
     
     useEffect(() => {
+        console.log("Getting user stories")
         dispatch(getUserStories());
     }, [])
     
@@ -25,6 +27,7 @@ function UserStories () {
     
     return (
         <div className='user-story-container'>
+            <h1>Stories</h1>
             {storiesArray.map(story => {
                 return <h1 className='individual-stories' onClick={() => handleClick(story.id)}>{story.title}</h1>
             })}
