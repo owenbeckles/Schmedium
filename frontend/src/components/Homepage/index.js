@@ -23,6 +23,9 @@ function Homepage () {
             {storiesArray.map(story => {
                 return <h1 className='trending-stories'>{story.title}</h1>
             })}
+            <footer>
+                <p>Footer</p>
+            </footer>
             {/* <div class="blog">
                     <div class="blog-part is-menu">
                     <a href="#" class="blog-menu">

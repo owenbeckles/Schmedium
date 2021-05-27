@@ -30,6 +30,10 @@ function IndividualStory () {
         history.push('/stories');
     }
 
+    const editClick = async(e) => {
+        history.push(`/edit/${story.id}`)
+    }
+
     const returnClick = async(e) => {
         e.preventDefault();
         history.push('/stories');
@@ -39,12 +43,12 @@ function IndividualStory () {
     
     return (
         <div>
-            <div className='story-container'>
-                <h1 className='story-title'>{story.title}</h1>
-                <h2 className='story-content'>{story.content}</h2>
+            <div className='individual-story-container'>
+                <h1 className='individual-story-title'>{story.title}</h1>
+                <h2 className='individual-story-content'>{story.content}</h2>
             </div>
             <div className='button-container'>
-                <button className='user-edit-button' type='submit'>Edit</button>
+                <button className='user-edit-button' type='submit' onClick={ editClick }>Edit</button>
                 <button onClick={handleClick} className='user-delete-button' type='submit'>Delete</button>
             </div>
             <div onClick={returnClick} className='return-container'>

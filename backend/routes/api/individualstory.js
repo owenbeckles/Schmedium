@@ -6,16 +6,25 @@ const db = require('../../db/models');
 
 // Delete User Posts
 router.delete('/:id', asyncHandler(async (req,res) => {
-    const storyId = req.params.id 
-    console.log('This is its id=========',storyId)
-    const story = await db.Story.findByPk(storyId)
+    const storyId = req.params.id;
+    const story = await db.Story.findByPk(storyId);
     await story.destroy();
     return res.json({ success: 'Your story was deleted.'})
 }));
 
+// Edit User Posts
+router.put('/:id', asyncHandler(async(req, res) => {
+    const { title, content, userId } = req.body;
+    const storyId = req.params.id;
+    const edit = await db.Story.findByPk(storyId)
 
+    edit.update({
+        title: title,
+        content: content,
+    })
+    return res.json(edit)
+
+}));
 
 
 module.exports = router;
-
-//
