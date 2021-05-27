@@ -25,11 +25,11 @@ export const getIndividualStory = () => async (dispatch) => {
     dispatch(individualstory(data));
 }
 
-export const deleteStory = () => async (dispatch) => {
-    const response = await csrfFetch('/api/individualstory', {
+export const deleteStory = (data) => async (dispatch) => {
+    const response = await csrfFetch('/api/individualstory/${data.id}', {
         method: 'DELETE',
     })
-    dispatch(deletestories());
+    dispatch(deletestories(data));
     return response;
 }
 

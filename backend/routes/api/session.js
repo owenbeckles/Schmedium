@@ -65,4 +65,12 @@ const validateLogin = [
     }
   );
 
+  router.post('/demo', asyncHandler(async (req, res) => {
+    const demoUser = await User.findByPk(1);
+    await setTokenCookie(res, demoUser);
+    return res.json({
+      demoUser,
+    });
+  }))
+
 module.exports = router;
