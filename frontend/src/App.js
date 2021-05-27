@@ -7,6 +7,8 @@ import CreatingUserStories from './components/CreatingUserStories';
 import Homepage from './components/Homepage';
 import UserStories from './components/UserStories';
 import IndividualStory from './components/IndividualStory';
+import ProfilePage from './components/ProfilePage';
+import EditStory from './components/EditStory';
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 
@@ -36,6 +38,12 @@ function App() {
           </Route>
           <Route exact path='/stories/:id'>
             <IndividualStory />
+          </Route>
+          <Route path='/profile/:id'>
+            <ProfilePage />
+          </Route>
+          <Route path='/edit/:id'>
+            <EditStory />
           </Route>
           {/* //Ternary for session user on homepage */}
         </Switch>

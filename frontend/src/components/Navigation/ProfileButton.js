@@ -47,7 +47,7 @@ function ProfileButton({ user }) {
           <Link to='/stories' className='create-button'>My Stories</Link>
           </li>
           <li>
-          <Link to='/' className='create-button'>My Profile</Link>
+          <Link to='/profile/${userId}' className='create-button'>My Profile</Link>
           </li>
           <li>
           <Link to='/create' className='create-button'>Settings</Link>

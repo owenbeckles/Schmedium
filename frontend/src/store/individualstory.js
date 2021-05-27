@@ -2,7 +2,7 @@
 import { csrfFetch } from './csrf';
 
 const INDIVIDUAL_STORY = 'session/individualstory'
-const DELETE_STORY = 'session/deletestories'
+
 
 const individualstory = (story) => {
     return {
@@ -11,11 +11,6 @@ const individualstory = (story) => {
     }
 }
 
-const deletestories = () => {
-    return {
-        type: DELETE_STORY,
-    }
-}
 
 export const getIndividualStory = () => async (dispatch) => {
     const response = await csrfFetch('/api/userstories', {
@@ -25,13 +20,6 @@ export const getIndividualStory = () => async (dispatch) => {
     dispatch(individualstory(data));
 }
 
-export const deleteStory = () => async (dispatch) => {
-    const response = await csrfFetch('/api/individualstory', {
-        method: 'DELETE',
-    })
-    dispatch(deletestories());
-    return response;
-}
 
 const individualStoryReducer = (state = {}, action) => {
     let newState;
@@ -41,10 +29,6 @@ const individualStoryReducer = (state = {}, action) => {
             action.payload.forEach(story => {
                 newState[story.id] = story;
             });
-            return newState;
-        case DELETE_STORY:
-            newState = Object.assign({}, state);
-            newState.story = null;
             return newState;
         default:
             return state;

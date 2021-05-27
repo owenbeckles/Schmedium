@@ -5,9 +5,10 @@ const router = express.Router();
 const db = require('../../db/models');
 
 // Delete User Posts
-router.delete('/individualstories', asyncHandler(async (req,res) => {
+router.delete('/:id', asyncHandler(async (req,res) => {
     const storyId = req.params.id 
-    const story = await Story.findbyPk(storyId);
+    console.log('This is its id=========',storyId)
+    const story = await db.Story.findByPk(storyId)
     await story.destroy();
     return res.json({ success: 'Your story was deleted.'})
 }));
@@ -16,3 +17,5 @@ router.delete('/individualstories', asyncHandler(async (req,res) => {
 
 
 module.exports = router;
+
+//
