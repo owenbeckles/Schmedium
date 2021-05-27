@@ -21,7 +21,6 @@ export const getUserStories = () => async (dispatch) => {
     method: 'GET'
   });
   const data = await response.json();
-  console.log(data, 'This is data');
   dispatch(allStories(data));
 };
 

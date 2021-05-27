@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
-const userStoriesRouter = require('./newstories');
+const userStoriesRouter = require('./newstories.js');
 const creatingStoriesRouter = require('./createstory.js');
+const individualStoryRouter = require('./individualstory.js')
 
 router.use('/session', sessionRouter);
 
@@ -11,6 +12,8 @@ router.use('/users', usersRouter);
 router.use('/userstories', userStoriesRouter)
 
 router.use('/create', creatingStoriesRouter)
+
+router.use('/individualstory', individualStoryRouter)
 
 
 module.exports = router;
