@@ -1,5 +1,6 @@
 import React from 'react';
 import { getIndividualStory } from '../../store/creatingstories';
+import { Link } from 'react-router-dom';
 import { getUserStories } from '../../store/userstories';
 import './IndividualStory.css';
 import { deleteStory } from '../../store/individualstory';
@@ -28,7 +29,12 @@ function IndividualStory () {
             content, 
             userId 
         }
-        await dispatch(deleteStory(data));
+        dispatch(deleteStory(data));
+        history.push('/stories');
+    }
+
+    const returnClick = async(e) => {
+        e.preventDefault();
         history.push('/stories');
     }
     
@@ -43,6 +49,12 @@ function IndividualStory () {
             <div className='button-container'>
                 <button className='user-edit-button' type='submit'>Edit</button>
                 <button onClick={handleClick} className='user-delete-button' type='submit'>Delete</button>
+            </div>
+            <div onClick={returnClick} className='return-container'>
+                <button className='return-page' type='submit'>
+                    My Stories
+                    <Link to='/stories'></Link>
+                </button>
             </div>
         </div>
     )
