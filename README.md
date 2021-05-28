@@ -23,5 +23,3 @@ Schmedium uses a number of technologies to function:
     - Sequelize
     - Javascript
     - Heroku Deployment
-
-![Database Schema](/Users/owenbeckles/Documents/Schmedium/DatabaseSchema.png)
