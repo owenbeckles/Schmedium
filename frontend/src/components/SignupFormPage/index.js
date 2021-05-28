@@ -33,6 +33,7 @@ function SignupFormPage() {
 
   return (
     <form class='signup-form' onSubmit={handleSubmit}>
+      <div className='sign-up-info'>
       <ul>
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
       </ul>
@@ -90,7 +91,10 @@ function SignupFormPage() {
           required
         />
       </label>
-      <button type="submit">Sign Up</button>
+      </div>
+      <div className='sign-up-button-container'>
+      <button className='sign-up-confirm-button' type="submit">Sign Up</button>
+      </div>
     </form>
   );
 }
