@@ -1,7 +1,7 @@
 # Schmedium
 ## _Summary_
 
-[Schmedium](schmedium.herokuapp.com "Schmedium") is a Full-Stack social application that allows users to read and create stories relevant to their favorite Anime.
+[Schmedium](wikipedia.com "Schmedium") is a Full-Stack social application that allows users to read and create stories relevant to their favorite Anime.
 
 ## Features
 
