@@ -15,6 +15,7 @@ function IndividualStory () {
     const [userId, setUserId] = useState(null);
     const { id } = useParams();
     const story = useSelector((state) => state.userStories[id])
+    const user = useSelector((state) => state.session[id])
     const dispatch = useDispatch();
     const history = useHistory();
     
@@ -47,6 +48,11 @@ function IndividualStory () {
                 <h1 className='individual-story-title'>{story.title}</h1>
                 <h2 className='individual-story-content'>{story.content}</h2>
             </div>
+            {/* <div>
+                <footer>
+                    Created By: {`${user.firstname}`}
+                </footer>
+            </div> */}
             <div className='button-container'>
                 <button className='user-edit-button' type='submit' onClick={ editClick }>Edit</button>
                 <button onClick={handleClick} className='user-delete-button' type='submit'>Delete</button>

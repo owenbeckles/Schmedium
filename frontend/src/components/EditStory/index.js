@@ -39,7 +39,7 @@ function EditStory () {
             id: story.id,
         }
         await dispatch(editStory(data))
-        history.push(`/stories`)
+        history.push(`/stories/${story.id}`)
     }
 
     return (
